@@ -3,7 +3,7 @@
 ## Visualize structure of the json file.
 
 # Example
-
+```
 [sample.json]
 {
     "glossary": {
@@ -27,15 +27,17 @@
         }
     }
 }
+```
 
 ```
+[In]
 import json_visualizer as jv
 
 json_path = 'sample.json'
 vis = jv.visualizer(json_path)
 vis.visualize()
 
-[out]
+[Out]
 
 json
 |-glossary      :       dict
@@ -60,11 +62,12 @@ json
 
 ## Show sample value of the variable
 ```
+[In]
 json_path = 'sample.json'
 vis = jv.visualizer(json_path)
 vis.visualize(with_sample = True)
 
-[out]
+[Out]
 
 json
 |-glossary      :       dict
