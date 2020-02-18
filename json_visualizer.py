@@ -148,7 +148,7 @@ class visualizer(object):
             self._print(s)
             self._visualize(self.json,0,with_sample=with_sample)
         else:
-            s = 'var'
+            s = 'var\t:\t'+chtype(var_direct)
             self._print(s)
             self._visualize(var_direct,0,with_sample=with_sample)
 
