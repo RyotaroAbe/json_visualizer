@@ -5,6 +5,7 @@
 # Example
 ```
 [sample.json]
+
 {
     "glossary": {
         "title": "example glossary",
@@ -28,9 +29,10 @@
     }
 }
 ```
-
+## Visualise the structure
 ```
 [In]
+
 import json_visualizer as jv
 
 json_path = 'sample.json'
@@ -60,9 +62,10 @@ json
 
 ```
 
-## Show sample value of the variable
+## Show the sample value of the variable
 ```
 [In]
+
 json_path = 'sample.json'
 vis = jv.visualizer(json_path)
 vis.visualize(with_sample = True)
@@ -99,4 +102,43 @@ json
       sample: markup
 
 ```
+# from command line
+```
+[In]
+
+python json_visualizer.py sample.json -s
+
+[Out]
+
+json
+|-glossary      :       dict
+ |-GlossDiv     :       dict
+  |-GlossList   :       dict
+   |-GlossEntry :       dict
+    |-GlossDef  :       dict
+     |-GlossSeeAlso     :       list
+       |- hoge  :       unicode
+         sample: GML
+     |-para     :       unicode
+       sample: A meta-markup language, used to create markup languages such as DocBook.
+
+    |-GlossSee  :       unicode
+      sample: markup
+    |-Acronym   :       unicode
+      sample: SGML
+    |-GlossTerm :       unicode
+      sample: Standard Generalized Markup Language
+    |-Abbrev    :       unicode
+      sample: ISO 8879:1986
+    |-SortAs    :       unicode
+      sample: SGML
+    |-ID        :       unicode
+      sample: SGML
+
+
+  |-title       :       unicode
+    sample: S
+
+ |-title        :       unicode
+   sample: example glossary
 ```
